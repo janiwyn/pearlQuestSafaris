@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Pearl Quest Safaris</title>
+  <meta name="description"
+    content="Pearl Quest Safaris — expert-guided tours across Uganda: gorilla trekking, wildlife safaris, Nile rafting, cultural experiences and bespoke itineraries." />
+  <meta name="keywords" content="Uganda safari, gorilla trekking, tours, travel, Pearl Quest Safaris" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --brand-green: #198754;
+      --brand-gold: #ffc107;
+      --muted: #6c757d;
+      --card-radius: 14px;
+      --max-width: 1200px;
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+      background: #f6f7f8;
+      color: #1b1b1b;
+      padding-top: 78px;
+      /* room for fixed navbar */
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: grey !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #ffc107 !important;
+    }
+
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.95);
+    }
+
+    .navbar .navbar-brand img {
+      border-radius: 50%
+    }
+
+    .nav-link {
+      color: #fff !important
+    }
+
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.9);
+      transition: 0.3s
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 78vh;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55));
+      z-index: 2
+    }
+
+    .hero .content {
+      position: relative;
+      z-index: 3;
+      max-width: 1100px;
+      padding: 0 20px
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      letter-spacing: 0.6px
+    }
+
+    .hero p.lead {
+      font-size: 1.15rem;
+      opacity: 0.95
+    }
+
+    /* video fits */
+    .hero video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1
+    }
+
+    /* counters */
+    .counters .stat {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 8px 30px rgba(10, 10, 10, 0.06)
+    }
+
+    .stat h3 {
+      font-weight: 700;
+      color: var(--brand-green);
+      margin-bottom: 6px
+    }
+
+    .stat p {
+      color: var(--muted);
+      margin: 0
+    }
+
+    /* values & icon-box */
+    .icon-box {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(10, 10, 10, 0.06);
+      transition: transform .25s
+    }
+
+    .icon-box:hover {
+      transform: translateY(-6px)
+    }
+
+    .icon-box i {
+      font-size: 32px;
+      color: var(--brand-green)
+    }
+
+    /* timeline */
+    .timeline {
+      position: relative;
+      padding-left: 20px
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: linear-gradient(var(--brand-green), #0b3f2a);
+      border-radius: 2px
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 14px 18px 14px 36px;
+      margin-bottom: 22px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(10, 10, 10, 0.04)
+    }
+
+    .timeline-item .year {
+      position: absolute;
+      left: -72px;
+      top: 12px;
+      background: var(--brand-green);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-weight: 700
+    }
+
+    /* team */
+    .team-member {
+      background: #fff;
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 8px 28px rgba(10, 10, 10, 0.06)
+    }
+
+    .team-member img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid rgba(255, 255, 255, 0.85);
+      margin-top: -70px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12)
+    }
+
+    .team-member h5 {
+      margin-top: 12px;
+      color: var(--brand-green);
+      font-weight: 700
+    }
+
+    .team-member p.role {
+      color: var(--muted);
+      margin-bottom: 8px
+    }
+
+    /* testimonials */
+    .testimonial {
+      background: linear-gradient(180deg, #0b2a18, #06331a);
+      color: #fff;
+      padding: 28px;
+      border-radius: 12px
+    }
+
+    .testimonial small {
+      color: #dfe9df
+    }
+
+    /* FAQ */
+    .faq .accordion-button {
+      border-radius: 8px
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, rgba(25, 135, 84, 0.95), rgba(2, 88, 59, 0.95));
+      color: #fff;
+      border-radius: 14px;
+      padding: 34px 28px;
+      box-shadow: 0 12px 40px rgba(5, 50, 30, 0.2)
+    }
+
+    .btn-pill {
+      border-radius: 999px;
+      padding: 12px 24px
+    }
+
+    /* Footer */
+    footer {
+      background-color: #004d00;
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: yellow;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* back to top */
+    #backToTop {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      background: var(--brand-green);
+      color: #fff;
+      border: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 26px rgba(2, 60, 30, 0.3);
+      z-index: 999
+    }
+
+    #backToTop:hover {
+      transform: translateY(-3px)
+    }
+
+    @media (max-width:768px) {
+      .hero h1 {
+        font-size: 2rem
+      }
+
+      .hero {
+        height: 56vh
+      }
+    }
+  </style>
+
+  <!-- Structured data (JSON-LD) for SEO / rich results -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TouristInformationCenter",
+    "name":"Pearl Quest Safaris",
+    "url":"https://example.com",
+    "logo":"https://example.com/images/logo.png",
+    "description":"Pearl Quest Safaris provides guided tours and travel packages across Uganda — gorilla trekking, safaris, rafting and cultural tours.",
+    "address":{"@type":"PostalAddress","addressLocality":"Kampala","addressCountry":"UG"},
+    "telephone":"+256742015425"
+  }
+  </script>
+</head>
+
+<body>
+  <!-- 🌐 Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="index.html">
+        <img src="images/deo1.jpeg" alt="Pearl Quest Safaris Logo" width="45" height="45" class="me-2 rounded-circle">
+        Pearl Quest Safaris
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours & Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="photo_album.html">Photo Album</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO (video with fallback image) -->
+  <header class="hero" role="banner" aria-label="About hero">
+    <!-- autoplay muted loop small clip from Pexels/Unsplash (example) -->
+    <video playsinline autoplay muted loop
+      poster="https://images.unsplash.com/photo-1526481280695-3c720685208b?auto=format&fit=crop&w=1600&q=80">
+      <source src="images/video.mp4" type="video/mp4">
+      <!-- fallback just uses poster image if video blocked on mobile -->
+    </video>
+    <div class="overlay" aria-hidden="true"></div>
+    <div class="content" data-aos="fade-up">
+      <h1 class="fw-bold">We craft unforgettable Ugandan experiences</h1>
+      <p class="lead mb-4">Local guides • Responsible tourism • Tailor-made itineraries — gorilla trekking, safaris,
+        Nile adventures and cultural journeys.</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="tours.html" class="btn btn-pill btn-warning fw-bold">See Tours</a>
+        <a href="contact.html" class="btn btn-outline-light btn-pill">Plan with an Expert</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRUST / BADGES -->
+  <section class="container my-5" data-aos="fade-up">
+    <div class="row g-3 align-items-center text-center">
+      <div class="col-md-3 col-6">
+        <div class="p-3 bg-white rounded d-flex flex-column align-items-center">
+          <i class="fa-solid fa-medal" style="font-size:36px;color:var(--brand-gold)"></i>
+          <small class="d-block mt-2">Eco Tourism Award</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="p-3 bg-white rounded d-flex flex-column align-items-center">
+          <i class="fa-solid fa-users" style="font-size:36px;color:var(--brand-green)"></i>
+          <small class="d-block mt-2">Trusted by 8,000+ Guests</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="p-3 bg-white rounded d-flex flex-column align-items-center">
+          <i class="fa-solid fa-medal" style="font-size:36px;color:var(--brand-gold)"></i>
+          <small class="d-block mt-2">Top Rated Guides</small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="p-3 bg-white rounded d-flex flex-column align-items-center">
+          <i class="fa-solid fa-seedling" style="font-size:36px;color:#138f61"></i>
+          <small class="d-block mt-2">Community Projects</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTERS -->
+  <section class="container counters my-4" data-aos="zoom-in">
+    <div class="row g-3 text-center">
+      <div class="col-md-3">
+        <div class="stat">
+          <h3><span class="counter" data-target="10">0</span>+</h3>
+          <p>Years in operation</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat">
+          <h3><span class="counter" data-target="250">0</span>+</h3>
+          <p>Tours delivered</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat">
+          <h3><span class="counter" data-target="8000">0</span>+</h3>
+          <p>Happy travellers</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat">
+          <h3><span class="counter" data-target="45">0</span>+</h3>
+          <p>Local guides</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION / VISION / VALUES -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-right">
+        <div class="icon-box">
+          <i class="fa-solid fa-bullseye"></i>
+          <h5 class="mt-3">Our Mission</h5>
+          <p class="mb-0">To connect travelers with authentic Ugandan experiences while protecting nature and empowering
+            local communities.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="icon-box">
+          <i class="fa-solid fa-eye"></i>
+          <h5 class="mt-3">Our Vision</h5>
+          <p class="mb-0">To inspire the world to discover Uganda the Pearl of Africa through unforgettable and
+            responsible safari experiences.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-left">
+        <div class="icon-box">
+          <i class="fa-solid fa-handshake-angle"></i>
+          <h5 class="mt-3">Our Values</h5>
+          <p class="mb-0">Safety, Respect, Sustainability & Local empowerment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE + CTA -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-lg-7" data-aos="fade-right">
+        <h3 class="text-success fw-bold">Our Journey</h3>
+        <div class="timeline mt-3">
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="50">
+            <div class="year">2015</div>
+            <h6 class="mb-1">Founding</h6>
+            <p class="mb-0">Started as a small group of guides passionate about bringing guests to Uganda’s wild places.
+            </p>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="year">2018</div>
+            <h6 class="mb-1">Growth</h6>
+            <p class="mb-0">Partnered with lodges and conservation programs to craft responsible routes.</p>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="year">2022</div>
+            <h6 class="mb-1">Recognition</h6>
+            <p class="mb-0">Awarded for community impact and sustainable tourism initiatives.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="cta">
+          <h4 class="fw-bold">Ready to Explore?</h4>
+          <p class="mb-3">Tell us your travel idea and we’ll craft a custom itinerary. Small groups, private departures,
+            and family-friendly options available.</p>
+          <a href="contact.html" class="btn btn-light btn-pill fw-bold me-2">Request a Quote</a>
+          <a href="tours.html" class="btn btn-outline-light btn-pill">View Tours</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM CAROUSEL -->
+  <section class="container my-5" data-aos="fade-up">
+    <h3 class="text-center text-success fw-bold mb-4">Meet the Team</h3>
+    <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center g-4">
+            <div class="col-md-3 col-8">
+              <div class="team-member p-4">
+                <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Sarah Nankya">
+                <h5>Sarah Nankya</h5>
+                <p class="role">Founder & CEO</p>
+                <p class="small text-muted">Founder with 15+ years in tourism & community development.</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-8">
+              <div class="team-member p-4">
+                <img src="https://randomuser.me/api/portraits/men/70.jpg" alt="James">
+                <h5>James Okello</h5>
+                <p class="role">Head Guide</p>
+                <p class="small text-muted">Lead guide and wildlife expert — Bwindi & Queen Elizabeth specialist.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row justify-content-center g-4">
+            <div class="col-md-3 col-8">
+              <div class="team-member p-4">
+                <img src="https://randomuser.me/api/portraits/women/48.jpg" alt="Grace">
+                <h5>Grace Namutebi</h5>
+                <p class="role">Travel Coordinator</p>
+                <p class="small text-muted">Ensures every itinerary is smooth and guest-focused.</p>
+              </div>
+            </div>
+            <div class="col-md-3 col-8">
+              <div class="team-member p-4">
+                <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Peter">
+                <h5>Peter Ssemanda</h5>
+                <p class="role">Photographer</p>
+                <p class="small text-muted">Documenting Uganda’s wildlife & culture for guests and conservation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="container my-5" data-aos="fade-up">
+    <h3 class="text-center text-success fw-bold mb-4">Traveler Stories</h3>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial p-4 text-center">
+                <p class="mb-3">“Our gorilla trek with Pearl Quest was life-changing — professional guides, seamless
+                  logistics and unforgettable moments.”</p>
+                <strong>— Sarah, UK</strong>
+                <small class="d-block mt-2">Visited: Bwindi | Rating: ★★★★★</small>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial p-4 text-center">
+                <p class="mb-3">“Well planned and so flexible — the team even organized a surprise cultural evening.
+                  Highly recommend!”</p>
+                <strong>— Mark, AU</strong>
+                <small class="d-block mt-2">Visited: Kampala & Jinja | Rating: ★★★★★</small>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span><span
+              class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ + Newsletter -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-lg-7" data-aos="fade-right">
+        <h4 class="text-success fw-bold">Frequently Asked Questions</h4>
+        <div class="accordion faq mt-3" id="faq">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq1">Do you include park fees?</button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">Most packages include park fees; the tour description specifies what's
+                included. We always confirm costs before booking.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq2">How hard is gorilla trekking?</button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">Trekking difficulty varies; tracks can be steep and muddy. We provide graded
+                options and experienced guides to match your fitness level.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="q3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq3">Can you create custom itineraries?</button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq">
+              <div class="accordion-body">Yes — most bookings are fully customizable. Use our contact form to share
+                dates and preferences, and we’ll craft a tailored plan.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="p-4 bg-white rounded">
+          <h5 class="fw-bold">Get Our Newsletter</h5>
+          <p class="small text-muted">Insider deals, travel tips & conservation stories — once per month.</p>
+          <form id="newsletterForm" class="d-flex flex-column gap-2">
+            <input id="nsName" class="form-control" placeholder="Your name" required>
+            <input id="nsEmail" type="email" class="form-control" placeholder="Your email" required>
+            <button class="btn btn-success btn-pill" type="submit">Subscribe</button>
+            <div id="nsMsg" role="status" class="small text-success visually-hidden">Thanks — you're subscribed!</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <div class="container">
+      <p>© 2025 Pearl Quest Safaris Tours And Travel | Designed with ❤️ in Uganda</p>
+      <div class="social-icons mb-4">
+        <a href="https://www.facebook.com/share/14Tp9AVRorJ/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/deangratius" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top"><i class="fa fa-arrow-up"></i></button>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 900, once: true });
+
+    // navbar change on scroll
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+    // Back to top
+    const back = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => back.style.display = window.scrollY > 300 ? 'flex' : 'none');
+    back.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // COUNTER animation (IntersectionObserver)
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = +el.getAttribute('data-target');
+          const start = 0;
+          const duration = 1600;
+          let startTime = null;
+          const step = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const progress = Math.min((timestamp - startTime) / duration, 1);
+            el.textContent = Math.floor(progress * (target - start) + start);
+            if (progress < 1) window.requestAnimationFrame(step);
+            else el.textContent = target;
+          };
+          window.requestAnimationFrame(step);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.2 });
+    counters.forEach(c => counterObserver.observe(c));
+
+    // Newsletter mock submit
+    document.getElementById('newsletterForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('nsName').value.trim();
+      const email = document.getElementById('nsEmail').value.trim();
+      const msg = document.getElementById('nsMsg');
+      if (!name || !email) { alert('Please enter name and email'); return; }
+      // In production, submit to your backend here.
+      msg.classList.remove('visually-hidden');
+      setTimeout(() => { msg.classList.add('visually-hidden'); this.reset(); }, 2500);
+    });
+
+    // Accessibility: keyboard focus outlines left as default; ensure image alt attributes exist.
+  </script>
+</body>
+
+</html>

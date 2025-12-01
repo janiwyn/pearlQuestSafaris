@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pearl Quest Safaris Tours And Travel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #f8f9fa;
+      padding-top: 80px;
+    }
+
+    .navbar {
+      background-color: grey !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #ffc107 !important;
+    }
+
+    .navbar.scrolled {
+      background: rgba(0, 0, 0, 0.95);
+    }
+
+    .photo-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=1500&q=80") center/cover no-repeat;
+      height: 70vh;
+      color: white;
+    }
+
+    .divider {
+      width: 80px;
+      height: 4px;
+      background: #198754;
+      margin: 20px auto;
+      border-radius: 2px;
+    }
+
+    /* Gallery */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      height: 250px;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Zoom Icon */
+    .gallery-item::after {
+      content: "\f00e";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: white;
+      font-size: 1.5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      transition: 0.3s ease;
+    }
+
+    .gallery-item:hover::after {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    .modal-content {
+      border-radius: 12px;
+      background: #1c1c1c;
+      color: #ddd;
+    }
+
+    .modal-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #004d00;
+      color: white;
+      padding: 25px 0;
+      text-align: center;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #198754;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    #backToTop:hover {
+      background: #157347;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning d-flex align-items-center" href="index.html">
+        <img src="images/deo1.jpeg" width="45" height="45" class="me-2 rounded-circle">
+        Pearl Quest Safaris
+      </a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours & Packages</a></li>
+          <li class="nav-item"><a class="nav-link active" href="photo_album.html">Photo Album</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="photo-hero d-flex align-items-center justify-content-center text-center">
+    <div class="bg-dark bg-opacity-50 p-5 rounded animate__animated animate__fadeInDown">
+      <h1 class="display-4 fw-bold text-warning">Uganda in Pictures</h1>
+      <p class="lead">A beautiful collection of moments from the Pearl of Africa.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center fw-bold text-success">Our Gallery</h2>
+      <div class="divider"></div>
+
+      <div class="row g-4" id="galleryContainer">
+
+        <!-- PHOTO ONLY — NO TEXT -->
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/gorillas.jpeg">
+          <img src="images/gorillas.jpeg" />
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/rwenzori.jpg">
+          <img src="images/rwenzori.jpg" />
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/Murchison Falls,.jpg">
+          <img src="images/Murchison Falls,.jpg" />
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/culture.jpg">
+          <img src="images/culture.jpg" />
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/Kampala City.jpg">
+          <img src="images/Kampala City.jpg" />
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/Night view of the nile bridge in jinja.jpg">
+          <img src="images/Night view of the nile bridge in jinja.jpg" />
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/Bujagali.jpg">
+          <img src="images/Bujagali.jpg" />
+        </div>
+
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic1.jpeg">
+          <img src="images/pic1.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic2.jpeg">
+          <img src="images/pic2.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic3.jpeg">
+          <img src="images/pic3.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic4.jpeg">
+          <img src="images/pic4.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic5.jpeg">
+          <img src="images/pic5.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic6.jpeg">
+          <img src="images/pic6.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic7.jpeg">
+          <img src="images/pic7.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic8.jpeg">
+          <img src="images/pic8.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic9.jpeg">
+          <img src="images/pic9.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic10.jpeg">
+          <img src="images/pic10.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic12.jpeg">
+          <img src="images/pic12.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic13.jpeg">
+          <img src="images/pic13.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic14.jpeg">
+          <img src="images/pic14.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic15.jpeg">
+          <img src="images/pic15.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic16.jpeg">
+          <img src="images/pic16.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic17.jpeg">
+          <img src="images/pic17.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic18.jpeg">
+          <img src="images/pic18.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic19.jpeg">
+          <img src="images/pic19.jpeg" />
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" data-bs-toggle="modal" data-bs-target="#photoModal"
+          data-image="images/pic20.jpeg">
+          <img src="images/pic20.jpeg" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="photoModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img id="modalImage" class="modal-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Pearl Quest Safaris Tours And Travel | Designed with ❤️ in Uganda</p>
+  </footer>
+
+  <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const photoModal = document.getElementById("photoModal");
+    photoModal.addEventListener("show.bs.modal", function (event) {
+      const trigger = event.relatedTarget;
+      document.getElementById("modalImage").src = trigger.getAttribute("data-image");
+    });
+
+    // Navbar scroll effect
+    window.addEventListener("scroll", () => {
+      const navbar = document.querySelector(".navbar");
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
+    });
+
+    // Back to top
+    const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTop.style.display = window.scrollY > 300 ? "flex" : "none";
+    });
+    backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  </script>
+
+</body>
+
+</html>
