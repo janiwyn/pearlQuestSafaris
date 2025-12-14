@@ -36,6 +36,33 @@
       color: rgb(8, 19, 8) !important;
     }
 
+    .brand-text {
+      max-width: 100%;
+    }
+
+    .brand-name {
+      font-size: 1.2rem;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    /* Tablets */
+    @media (max-width: 768px) {
+      .brand-name {
+        font-size: 1rem;
+      }
+    }
+
+    /* Small phones */
+    @media (max-width: 576px) {
+      .brand-name {
+        font-size: 0.9rem;
+        white-space: normal;
+        /* Allows wrapping */
+      }
+    }
+
+
     .nav-link {
       color: white !important;
       font-weight: 500;
@@ -213,8 +240,9 @@
     <div class="container">
       <a class="navbar-brand fw-bold d-flex align-items-center brand-text" href="index.html">
         <img src="images/deo1.jpeg" alt="Pearl Quest Safaris Logo" width="45" height="45" class="me-2 rounded-circle">
-        Pearl Quest Safaris
+        <span class="brand-name">Pearl Quest Safaris Tours & Travel</span>
       </a>
+
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
