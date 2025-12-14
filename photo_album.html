@@ -112,6 +112,10 @@
       padding: 25px 0;
       text-align: center;
     }
+     footer a {
+      color: yellow;
+      text-decoration: none;
+    }
 
     #backToTop {
       position: fixed;
@@ -133,13 +137,15 @@
     #backToTop:hover {
       background: #157347;
     }
-      .creator {
+
+    .creator {
       font-size: 14px;
       color: #ffc107;
       margin-top: 5px;
       font-style: italic;
     }
-        .brand-text {
+
+    .brand-text {
       color: rgb(8, 19, 8) !important;
     }
   </style>
@@ -150,7 +156,7 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-    <a class="navbar-brand fw-bold d-flex align-items-center brand-text" href="index.html">
+      <a class="navbar-brand fw-bold d-flex align-items-center brand-text" href="index.html">
         <img src="images/deo1.jpeg" alt="Pearl Quest Safaris Logo" width="45" height="45" class="me-2 rounded-circle">
         Pearl Quest Safaris
       </a>
@@ -315,11 +321,19 @@
   </div>
 
   <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Pearl Quest Safaris Tours And Travel | Designed with ❤️ in Uganda</p>
+  <footer class="text-center py-4">
+    <div class="container">
+      <p>© 2025 Pearl Quest Safaris Tours And Travel | Designed with ❤️ in Uganda</p>
       <p class="creator">
         Created by <strong>Jane</strong>
       </p>
+      <div class="social-icons mb-4">
+        <a href="https://www.facebook.com/share/14Tp9AVRorJ/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/deangratius" target="_blank"><i class="fab fa-instagram"></i></a>
+        <!-- <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a> -->
+      </div>
+    </div>
   </footer>
 
   <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
