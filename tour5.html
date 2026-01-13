@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>7 days Gorilla, Chimps and Wildlife Tour In Uganda </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: grey !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.95);
+        }
+
+
+        .tour-hero {
+            height: 70vh;
+            background: url("images/Murchison Falls,.jpg") center/cover no-repeat;
+            position: relative;
+        }
+
+        .tour-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .55);
+        }
+
+        .tour-hero .content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+
+        .timeline {
+            border-left: 3px solid #198754;
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -12px;
+            top: 10px;
+            width: 18px;
+            height: 18px;
+            background: #198754;
+            border-radius: 50%;
+        }
+
+        .timeline-cover {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .timeline-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .timeline-cover .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, .55);
+        }
+
+        .timeline-cover .text {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .sidebar-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .08);
+            margin-bottom: 25px;
+        }
+
+        .sticky-sidebar {
+            position: sticky;
+            top: 100px;
+        }
+
+        .animal-gallery img {
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #198754;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #004d00;
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: yellow;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .creator {
+            font-size: 14px;
+            color: #ffc107;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        .brand-text {
+            max-width: 100%;
+        }
+
+        .brand-name {
+            font-size: 1.2rem;
+            line-height: 1.2;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 🌐 Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center brand-text" href="index.html">
+                <img src="images/deo1.jpeg" alt="Pearl Quest Safaris Logo" width="45" height="45"
+                    class="me-2 rounded-circle">
+                <span class="brand-name">Pearl Quest Safaris Tours & Travel</span>
+            </a>
+
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tours.html">Tours & Packages</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="photo_album.html">Photo Album</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="tour-hero d-flex align-items-center">
+        <div class="container content">
+            <h1 class="fw-bold">3-days Murchison Fall National Park </h1>
+            <p class="fs-5">⭐ 4.9/5 (532 Reviews)</p>
+            <a href="contact.html" class="btn btn-warning btn-lg">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row">
+
+            <!-- LEFT CONTENT -->
+            <div class="col-lg-8">
+
+                <!-- SUB NAV -->
+                <ul class="nav nav-pills mb-4 bg-dark">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#overview">
+                            <i class="bi bi-info-circle"></i> Overview
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#daybyday">
+                            <i class="bi bi-calendar-week"></i> Day by Day
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <!-- OVERVIEW TAB -->
+                    <div class="tab-pane fade show active" id="overview">
+                        <h5 class="fw-bold">
+                            <h5 class="fw-bold">3 DAYS MURCHISON FALLS </h5>
+                        </h5>
+                        <p><strong>PERIOD – 3DAYS</strong> </p>
+                        <p><strong style="color:green">PRICE -$990 PER PERSON </strong></p>
+
+                        <p>
+                            On this safari, you will explore Murchison Falls National Park, home to one of the world's
+                            most powerful waterfalls. You will also observe diverse wildlife within the park and its
+                            surroundings. The adventure includes a memorable boat cruise on the iconic Nile River. This
+                            journey promises to be an unforgettable experience amid Uganda's stunning beauty and also a
+                            visit to the ziwa rhino sanctuary.
+                        </p>
+
+                        <!-- ROUTE MAP -->
+                        <div class="sidebar-card">
+                            <h5 class="fw-bold"><i class="bi bi-map-fill text-success"></i> Tour Route</h5>
+                            <img src="images/image6.png" class="img-fluid rounded">
+                            <p class="small text-muted mt-2">
+                                Entebbe → Murchison Falls
+                            </p>
+                        </div>
+
+                        <!-- FEATURES -->
+                        <section id="features" class="container py-5">
+                            <h2 class="fw-bold mb-4">Tour Features</h2>
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="feature-box text-center">
+                                        <i class="bi bi-house-door fs-1 text-success mb-3"></i>
+                                        <h5 class="fw-bold">Mid-range Tour</h5>
+                                        <p>Comfortable lodges at Murchison Falls.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="feature-box text-center">
+                                        <i class="bi bi-person-fill fs-1 text-success mb-3"></i>
+                                        <h5 class="fw-bold">Private Tour</h5>
+                                        <p>Exclusively organized for your group.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="feature-box text-center">
+                                        <i class="bi bi-calendar-event fs-1 text-success mb-3"></i>
+                                        <h5 class="fw-bold">Flexible Dates</h5>
+                                        <p>Tour can start on any day depending on availability.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- INCLUSIONS -->
+                        <h3 class="fw-bold mt-5">Inclusions & Exclusions</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h6 class="text-success fw-bold">Included</h6>
+                                <ul>
+                                    <li>Park fees (Non-residents)</li>
+                                    <li>Gorilla permits (1 per person)</li>
+                                    <li>All activities unless optional</li>
+                                    <li>All accommodation & meals as specified</li>
+                                    <li>Professional driver/guide</li>
+                                    <li>Transportation (unless optional)</li>
+                                    <li>Taxes/VAT</li>
+                                    <li>Roundtrip airport transfer</li>
+                                    <li>Drinking water on all days</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="text-danger fw-bold">Excluded</h6>
+                                <ul>
+                                    <li>International flights</li>
+                                    <li>Additional accommodation before/after tour</li>
+                                    <li>Tips (suggested US$10 pp/day)</li>
+                                    <li>Personal items (souvenirs, insurance, visas)</li>
+                                    <li>Government-imposed tax/park fee increases</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DAY BY DAY TAB -->
+                    <div class="tab-pane fade" id="daybyday">
+
+                        <h5 class="fw-bold mb-4">Day by Day Itinerary</h5>
+                        <p><strong>Arrival </strong></p>
+                        <li>You'll be collected from the airport.</li>
+                        <li>Accommodation before the tour starts can be arranged for an extra cost.</li>
+                        <br>
+
+                        <div class="timeline">
+
+                            <!-- DAY 1 -->
+                            <div class="timeline-item">
+                                <div class="timeline-cover">
+                                    <img src="images/airport.jpg">
+                                    <div class="overlay"></div>
+                                    <div class="text">
+                                        <span class="badge bg-success mb-2">Day 1</span>
+                                        <h4>Arrival & Airport Pickup</h4>
+                                    </div>
+                                </div>
+                                <p>Arrival at Entebbe, meet your guide and transfer to your hotel.</p>
+                                <div class="timeline-content">
+                                    <p>
+                                        Upon arrival at Entebbe Airport, your guide will meet you and transfer you to
+                                        your
+                                        booked lodge
+                                        in Entebbe town.
+                                        Relax and prepare for your safari the next day. You can also opt for a short
+                                        city
+                                        tour depending
+                                        on your arrival time.
+                                    </p>
+
+                                    <!-- Accommodation thumbnails -->
+                                    <div class="accommodation mb-4">
+                                        <h6>Main Destination: Entebbe (City)</h6>
+                                        <div class="row g-3">
+
+                                            <!-- Accommodation 1 -->
+                                            <div class="col-6 col-md-3 text-center">
+                                                <img src="images/HERMISTON GUEST HOUSE - Updated 2022 Prices, B&B….jpg"
+                                                    alt="The Boma Hotel" class="img-fluid rounded thumb-photo mb-2"
+                                                    style="max-height:120px;">
+                                                <div class="accommodation-details">
+                                                </div>
+                                            </div>
+
+                                            <!-- Accommodation 2 -->
+                                            <div class="col-6 col-md-3 text-center">
+                                                <img src="images/Located in Midrand, within 5_6 miles of Gallagher….jpg"
+                                                    alt="Another Hotel" class="img-fluid rounded thumb-photo mb-2"
+                                                    style="max-height:120px;">
+                                                <div class="accommodation-details">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <h6 class="fw-bold">Meals & Drinks</h6>
+                                    <ul class="mb-0">
+                                        <li>All meals included</li>
+                                        <li>Drinking water (Other drinks not included)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- DAY 2 -->
+                            <div class="timeline-item">
+                                <div class="timeline-cover">
+                                    <img src="images/gorillas.jpeg">
+                                    <div class="overlay"></div>
+                                    <div class="text">
+                                        <span class="badge bg-success mb-2">Day 2</span>
+                                        <h4>Murchison Falls</h4>
+                                    </div>
+                                </div>
+                                <p>Transfer to Murchison Falls N/Park and Top of Falls</p>
+                                <p>An early start for the 5-6 hour drive from Entebbe as you head to Murchison Falls
+                                    National Park. You shall then proceed to check into your hotel for lunch.
+                                    Thereafter, you'll drive to the top of the falls, where you can see the Nile's
+                                    beauty perfected. You'll marvel at the Nile as it explodes through a narrow gorge
+                                    and cascades down, compressing from 50 meters to squeeze through a 6-meter canyon
+                                    dropping 40 meters with a thunderous roar.
+                                    An evening game drive in search of the Big Four—lions, elephants, buffaloes, and
+                                    leopards is the perfect way to end this day.
+                                </p>
+                                <p><strong>Main Destination : Murchison Falls National Park </strong></p>
+                                <p>Best Time To Visit December to February (Easier to spot animals)
+                                </p>
+                                <p>High Season June to September (Peak time for Uganda)</p>
+                                <p>Best Weather June and July (Less rain and lower temperatures)</p>
+
+
+                                <!-- Best Time & Wildlife -->
+                                <h6 class="fw-bold">Wildlife in Murchison Falls NP:</h6>
+                                <div class="row g-2 mb-3 text-center">
+                                    <div class="col-4 col-md-2">
+                                        <img src="images/goli.png" alt="Gorilla" class="img-fluid rounded mb-1"
+                                            style="max-height:80px;">
+                                        <div>Gorilla: Rare</div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <img src="images/chempa.png" alt="Chimpanzee" class="img-fluid rounded mb-1"
+                                            style="max-height:80px;">
+                                        <div>Chimpanzee: Common</div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <img src="images/elephant.png" alt="Elephant" class="img-fluid rounded mb-1"
+                                            style="max-height:80px;">
+                                        <div>Elephant: Rare</div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <img src="images/buffu.png" alt="Elephant" class="img-fluid rounded mb-1"
+                                            style="max-height:80px;">
+                                        <div>Buffulo: None</div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <img src="images/lion.png" alt="Elephant" class="img-fluid rounded mb-1"
+                                            style="max-height:80px;">
+                                        <div>Lion: None</div>
+                                    </div>
+                                </div>
+
+                                <!-- Accommodation & Meals -->
+                                <h6 class="fw-bold">Accommodation</h6>
+                                <li> Mid-range lodge located just outside Kibale NP (Chimps)</li>
+                                <div class="row g-3">
+                                    <div class="col-6 col-md-3 text-center">
+                                        <img src="images/cc1.png" alt="Bwindi Lodge" class="img-fluid rounded mb-2"
+                                            style="max-height:120px;">
+                                    </div>
+                                    <div class="col-6 col-md-3 text-center">
+                                        <img src="images/cc2.png" alt="Bwindi Camp" class="img-fluid rounded mb-2"
+                                            style="max-height:120px;">
+                                    </div>
+                                    <div class="col-6 col-md-3 text-center">
+                                        <img src="images/cc3.png" alt="Bwindi Camp" class="img-fluid rounded mb-2"
+                                            style="max-height:120px;">
+                                    </div>
+                                    <div class="col-6 col-md-3 text-center">
+                                        <img src="images/cc4.png" alt="Bwindi Camp" class="img-fluid rounded mb-2"
+                                            style="max-height:120px;">
+                                    </div>
+
+                                </div>
+                                <h6 class="fw-bold">Meals & Drinks</h6>
+                                <ul class="mb-0">
+                                    <li>Lunch & dinner (Breakfast not included)</li>
+                                    <li>Drinking water (Other drinks not included)</li>
+                                </ul>
+                            </div>
+
+                            <!-- DAY 3 -->
+                            <div class="timeline-item">
+                                <div class="timeline-cover">
+                                    <img src="images/r5.png">
+                                    <div class="overlay"></div>
+                                    <div class="text">
+                                        <span class="badge bg-success mb-2">Day 3</span>
+                                        <h4>Game Drive and Boat Cruise</h4>
+                                    </div>
+                                </div>
+                                <!-- <p>Transfer to Queen Elizabeth national park</p> -->
+                                <p>You'll wake up amidst the wildlife and enjoy a stunning sunrise over the Nile with a
+                                    refreshing cup of coffee and fresh fruits. After breakfast, you'll embark on an
+                                    exciting game drive to the Northern Bank, where you’ll have the chance to spot the
+                                    Big Four—elephants, lions, buffaloes, and leopards—along with giraffes, antelopes,
+                                    and other fascinating wildlife. After an exhilarating morning of wildlife viewing,
+                                    you’ll return for a delicious lunch at the lodge.
+
+                                </p>
+                                <p>In the afternoon, you'll relax on a sundowner boat cruise along the Victoria Nile,
+                                    where you can enjoy breathtaking views of the river and wildlife. Keep an eye out
+                                    for crocodiles, hippos, and an array of bird species as the day winds down in the
+                                    golden glow of the setting sun. You will then head back to your hotel for dinner and
+                                    a good night's sleep.
+                                </p>
+                                <p><strong>Main Destination : Murchison Falls National Park </strong></p>
+
+                                <!-- Accommodation & Meals -->
+                                <h6 class="fw-bold">Accommodation</h6>
+                                <li>Mid-range lodge located inside Murchison Falls NP</li>
+                                <h6 class="fw-bold">Meals & Drinks</h6>
+                                <ul class="mb-0">
+                                    <li>All meals included</li>
+                                    <li>Drinking water (Other drinks not included)</li>
+                                </ul>
+                            </div>
+                            <!-- DAY 4 -->
+                            <div class="timeline-item">
+                                <div class="timeline-cover">
+                                    <img src="images/port.png">
+                                    <div class="overlay"></div>
+                                    <div class="text">
+                                        <span class="badge bg-success mb-2"></span>
+                                        <!-- <h4>Queen Elizabeth NP</h4> -->
+                                    </div>
+                                </div>
+                                <!-- <p>Canoe ride on Lake Bunyonyi then return to Entebbe.</p> -->
+                                <!-- Timeline Content -->
+                                <div class="timeline-item p-3 rounded shadow-sm bg-white mb-4">
+                                    <h5 class="fw-bold">Return to Entebbe</h5>
+                                    <p>
+                                        With the superb memories of the captivating sights and soul-stirring sounds from
+                                        the past two days, you will enjoy a heavy and tasty breakfast, then proceed to
+                                        check out of the lodge as you embark on your journey to Entebbe International
+                                        Airport or a hotel within Entebbe.
+                                    </p>
+
+                                    <h6 class="fw-bold">Main Destination:</h6>
+                                    <p>Entebbe (City)</p>
+
+                                    <h6 class="fw-bold">Meals & Drinks:</h6>
+                                    <ul class="mb-0">
+                                        <li>Breakfast & Lunch included</li>
+                                        <li>Dinner not included</li>
+                                        <li>Drinking water provided</li>
+                                    </ul>
+                                    <h6 class="fw-bold">End of tour </h6>
+                                    <ul class="mb-0">
+                                        <li>Additional accommodation can be arranged for an extra cost.</li>
+                                        <li>You'll be dropped off at the airport.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- RIGHT SIDEBAR -->
+            <div class="col-lg-4">
+                <div class="sticky-sidebar">
+
+                    <!-- UGANDA TOURISM MAP -->
+                    <div class="sidebar-card">
+                        <h5 class="fw-bold mb-3">
+                            <i class="bi bi-geo-alt-fill text-success"></i> Uganda Tourism Map
+                        </h5>
+
+                        <img src="images/Uganda map.jpg" class="img-fluid rounded shadow-sm"
+                            alt="Uganda Tourism Sites Map">
+
+                        <p class="small mt-3 text-muted">
+                            Showing Uganda’s major tourism destinations including
+                            <strong>Murchison Falls</strong>
+                            Queen Elizabeth NP, Bwindi NP, Murchison Falls NP, Kibale Forest, and more.
+                        </p>
+
+                        <div class="alert alert-success py-2 small mb-0">
+                            <i class="bi bi-check-circle-fill"></i>
+                            <strong>This tour covers:</strong> Entebbe → Murchison Falls
+                        </div>
+                    </div>
+
+
+                    <!-- REVIEWS -->
+                    <div class="sidebar-card">
+                        <h5 class="fw-bold mb-3">
+                            <i class="bi bi-chat-quote-fill text-success"></i> Traveler Reviews
+                        </h5>
+
+                        <p class="mb-2">
+                            ⭐⭐⭐⭐⭐ <br>
+                            “The gorilla trek was life-changing. Professional guide and great lodges.”
+                            <br><small class="text-muted">— Sarah, UK</small>
+                        </p>
+
+                        <p class="mb-0">
+                            ⭐⭐⭐⭐⭐ <br>
+                            “Lake Bunyonyi was peaceful and beautiful. Highly recommended!”
+                            <br><small class="text-muted">— Michael, USA</small>
+                        </p>
+                    </div>
+                    <!-- SIDEBAR IMAGE SLIDER -->
+                    <!-- SIDEBAR IMAGE SLIDER -->
+                    <div class="sidebar-card">
+                        <h5 class="fw-bold mb-3">
+                            <i class="bi bi-images text-success"></i> Safari Highlights
+                        </h5>
+
+                        <div id="sidebarSlider" class="carousel slide" data-bs-ride="carousel">
+
+                            <!-- Indicators -->
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#sidebarSlider" data-bs-slide-to="0"
+                                    class="active"></button>
+                                <button type="button" data-bs-target="#sidebarSlider" data-bs-slide-to="1"></button>
+                                <button type="button" data-bs-target="#sidebarSlider" data-bs-slide-to="2"></button>
+                                <button type="button" data-bs-target="#sidebarSlider" data-bs-slide-to="3"></button>
+                                <button type="button" data-bs-target="#sidebarSlider" data-bs-slide-to="4"></button>
+                                <button type="button" data-bs-target="#sidebarSlider" data-bs-slide-to="5"></button>
+                                <button type="button" data-bs-target="#sidebarSlider" data-bs-slide-to="6"></button>
+                                <button type="button" data-bs-target="#sidebarSlider" data-bs-slide-to="7"></button>
+                                <button type="button" data-bs-target="#sidebarSlider" data-bs-slide-to="8"></button>
+                                <button type="button" data-bs-target="#sidebarSlider" data-bs-slide-to="9"></button>
+                                <button type="button" data-bs-target="#sidebarSlider" data-bs-slide-to="10"></button>
+                            </div>
+
+                            <!-- Slides -->
+                            <div class="carousel-inner rounded shadow-sm">
+
+                                <div class="carousel-item active">
+                                    <img src="images/r1.png" class="d-block w-100" alt="kazinga">
+                                    <div class="carousel-caption small bg-dark bg-opacity-50 rounded">
+                                        cruising
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/r2.png" class="d-block w-100" alt="kazinga">
+                                    <div class="carousel-caption small bg-dark bg-opacity-50 rounded">
+                                        cruising
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/r3.png" class="d-block w-100"
+                                        alt="elizabeth">
+                                    <div class="carousel-caption small bg-dark bg-opacity-50 rounded">
+                                        cruising
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/Murchison Falls,.jpg" class="d-block w-100"
+                                        alt="queen">
+                                    <div class="carousel-caption small bg-dark bg-opacity-50 rounded">
+                                        Murchison
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Queen_Elizabeth_National_Park_043.jpg" class="d-block w-100"
+                                        alt="0e">
+                                    <div class="carousel-caption small bg-dark bg-opacity-50 rounded">
+                                        Elephants
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Queen_Elizabeth_National_Park_012.jpg" class="d-block w-100"
+                                        alt="0f">
+                                    <div class="carousel-caption small bg-dark bg-opacity-50 rounded">
+                                        Elephant
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Queen_Elizabeth_National_Park_018.jpg" class="d-block w-100"
+                                        alt="9f">
+                                    <div class="carousel-caption small bg-dark bg-opacity-50 rounded">
+                                        Leopards
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Queen_Elizabeth_National_Park_026.jpg" class="d-block w-100"
+                                        alt="ef">
+                                    <div class="carousel-caption small bg-dark bg-opacity-50 rounded">
+                                        Buffalos
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Queen_Elizabeth_National_Park_031.jpg" class="d-block w-100"
+                                        alt="ef">
+                                    <div class="carousel-caption small bg-dark bg-opacity-50 rounded">
+                                        Birds
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/Queen_Elizabeth_National_Park_046.jpg" class="d-block w-100"
+                                        alt="ef">
+                                    <div class="carousel-caption small bg-dark bg-opacity-50 rounded">
+                                        Leopard
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/ef.jpg" class="d-block w-100" alt="ef">
+                                    <div class="carousel-caption small bg-dark bg-opacity-50 rounded">
+                                        Gorilla
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <!-- Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#sidebarSlider"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+
+                            <button class="carousel-control-next" type="button" data-bs-target="#sidebarSlider"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+
+                        </div>
+
+                        <p class="small text-muted mt-2 mb-0">
+                            Wildlife and scenery you may encounter on this tour.
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- GETTING THERE -->
+    <section id="getting-there" class="container py-5">
+        <div class="row g-4 align-items-center">
+
+            <div class="col-md-7">
+                <h2 class="fw-bold mb-3">Getting There</h2>
+                <p>
+                    This tour starts and ends in <strong>Entebbe International Airport (EBB)</strong>.
+                    Airport pick-up and drop-off are included. Your professional guide will meet you
+                    upon arrival.
+                </p>
+
+                <ul class="list-unstyled mt-3">
+                    <li class="mb-2">
+                        <i class="bi bi-airplane-fill text-success"></i>
+                        International flights arrive at Entebbe (EBB)
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-truck-front-fill text-success"></i>
+                        Road transfers in a 4x4 safari vehicle
+                    </li>
+                    <li class="mb-2">
+                        <i class="bi bi-airplane-engines-fill text-success"></i>
+                        Optional domestic flight to Kihihi Airstrip (extra cost)
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-5 text-center">
+                <div class="p-4 border rounded shadow-sm bg-light">
+                    <h5 class="fw-bold mb-3">Need Help Planning?</h5>
+                    <p class="small mb-3">
+                        Our safari experts are happy to help you customize this tour,
+                        adjust dates, or answer any questions.
+                    </p>
+                    <a href="contact.html" class="btn btn-outline-success w-100">
+                        <i class="bi bi-chat-dots-fill"></i> Talk to a Safari Expert
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <div class="container">
+            <p>© 2025 Pearl Quest Safaris Tours And Travel | Designed with ❤️ in Uganda</p>
+            <p class="creator">
+                Created by <strong>Jane</strong>
+            </p>
+
+            <div class="social-icons mb-4">
+                <a href="https://www.facebook.com/share/14Tp9AVRorJ/" target="_blank"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/deangratius" target="_blank"><i class="fab fa-instagram"></i></a>
+                <!-- <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a> -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
