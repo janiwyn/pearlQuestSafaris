@@ -10,6 +10,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <style>
+     :root {
+      --safari-blue: #003366;
+      --safari-gold: #f4c430;
+      --safari-green: #004d00;
+    }
+
     body {
       font-family: "Poppins", sans-serif;
       background-color: #f8f9fa;
@@ -106,7 +112,7 @@
       border-radius: 10px;
     }
 
-    footer {
+    /* footer {
       background-color: #004d00;
       color: white;
       padding: 25px 0;
@@ -116,6 +122,53 @@
     footer a {
       color: yellow;
       text-decoration: none;
+    } */
+  /* ===== FOOTER ===== */
+    footer {
+      background: var(--safari-green);
+      color: white;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: left;
+    }
+
+    .newsletter-input {
+      border-radius: 30px;
+      border: none;
+      padding: 10px 15px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 22px;
+      margin-right: 12px;
+      transition: .3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--safari-gold);
+      transform: translateY(-3px);
+    }
+
+    .quick-links a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 6px;
+    }
+
+    .quick-links a:hover {
+      color: var(--safari-gold);
+    }
+
+    @media(max-width: 768px) {
+      .footer-grid {
+        text-align: center;
+      }
     }
 
     #backToTop {
@@ -347,20 +400,49 @@
       </div>
     </div>
   </div>
-
-  <!-- FOOTER -->
-  <footer class="text-center py-4">
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-5">
     <div class="container">
-      <p>© 2025 Pearl Quest Safaris Tours And Travel | Designed with ❤️ in Uganda</p>
-      <p class="creator">
-        Created by <strong>Jane</strong>
-      </p>
-      <div class="social-icons mb-4">
-        <a href="https://www.facebook.com/share/14Tp9AVRorJ/" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/deangratius" target="_blank"><i class="fab fa-instagram"></i></a>
-        <!-- <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a> -->
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div>
+          <h5 class="fw-bold">Pearl Quest Safaris</h5>
+          <p>
+            Your trusted partner in exploring Uganda’s wildlife,
+            culture and unforgettable adventures.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+          <h5>Quick Links</h5>
+          <a href="index.html">Home</a>
+          <a href="tours.html">Tours & Packages</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Social & Contact -->
+        <div>
+          <h5>Connect With Us</h5>
+
+          <div class="social-icons mb-3">
+            <a href="https://www.facebook.com/share/14Tp9AVRorJ/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/deangratius"><i class="fab fa-instagram"></i></a>
+          </div>
+
+          <small>Designed with ❤️ in Uganda</small><br>
+          <small class="text-warning">Created by Jane</small>
+        </div>
+
       </div>
+
+      <hr class="my-4">
+      <p class="text-center mb-0">
+        © 2026 Pearl Quest Safaris Tours And Travel
+      </p>
+
     </div>
   </footer>
 

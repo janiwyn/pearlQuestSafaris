@@ -10,6 +10,12 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
+     :root {
+      --safari-blue: #003366;
+      --safari-gold: #f4c430;
+      --safari-green: #004d00;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
     }
@@ -35,7 +41,7 @@
 
     /* Hero Section */
     .tours-hero {
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+      background: url(images/elephants.jpeg) center/cover no-repeat;
       height: 80vh;
       position: relative;
     }
@@ -134,7 +140,7 @@
     }
 
     /* Footer */
-    footer {
+    /* footer {
       background-color: #004d00;
       color: white;
       padding: 25px 0;
@@ -165,6 +171,53 @@
       font-size: 1.2rem;
       line-height: 1.2;
       white-space: nowrap;
+    } */
+  /* ===== FOOTER ===== */
+    footer {
+      background: var(--safari-green);
+      color: white;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      text-align: left;
+    }
+
+    .newsletter-input {
+      border-radius: 30px;
+      border: none;
+      padding: 10px 15px;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 22px;
+      margin-right: 12px;
+      transition: .3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--safari-gold);
+      transform: translateY(-3px);
+    }
+
+    .quick-links a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 6px;
+    }
+
+    .quick-links a:hover {
+      color: var(--safari-gold);
+    }
+
+    @media(max-width: 768px) {
+      .footer-grid {
+        text-align: center;
+      }
     }
 
     /* Tablets */
@@ -238,7 +291,7 @@
               <!-- Image -->
               <img src="images/gorillas.jpeg" alt="Bwindi Gorilla Trekking" class="card-img-top">
               <!-- Title -->
-              <h5 class="fw-bold mt-2">Gorilla Trekking Adventure</h5>
+              <h5 class="fw-bold mt-2 mb-2 px-3"> 3 Gorilla Trekking Adventure</h5>
 
               <!-- Card Body -->
               <div class="card-body">
@@ -276,7 +329,7 @@
               <!-- Image -->
               <img src="images/wildlife.jpg" alt="Wildlife Safari" class="card-img-top">
               <!-- Title -->
-              <h5 class="fw-bold mt-2">Wildlife Safari Experience</h5>
+              <h5 class="fw-bold mt-2 mb-2 px-3"> 3 Wildlife Safari Experience</h5>
 
               <!-- Card Body -->
               <div class="card-body">
@@ -314,7 +367,7 @@
               <!-- Image -->
               <img src="images/Queen_Elizabeth_National_Park_043.jpg" alt="Wildlife Safari" class="card-img-top">
               <!-- Title -->
-              <h5 class="fw-bold mt-2">Queen Elizabeth National Park</h5>
+              <h5 class="fw-bold mt-2 mb-2 px-3"> 2 Queen Elizabeth National Park</h5>
 
               <!-- Card Body -->
               <div class="card-body">
@@ -352,7 +405,7 @@
               <!-- Image -->
               <img src="images/pic10.jpeg" alt="Wildlife Safari" class="card-img-top">
               <!-- Title -->
-              <h5 class="fw-bold mt-2">Queen Elizabeth National Park & Gorilla Tracking
+              <h5 class="fw-bold mt-2 mb-2 px-3"> 4 Queen Elizabeth National Park & Gorilla Tracking
               </h5>
 
               <!-- Card Body -->
@@ -390,7 +443,7 @@
               <!-- Image -->
               <img src="images/Bwindi_Impenetrable_National_Park_007.jpg" alt="Wildlife Safari" class="card-img-top">
               <!-- Title -->
-              <h5 class="fw-bold mt-2">Gorilla, Chimps and Wildlife Tour
+              <h5 class="fw-bold mt-2 mb-2 px-3"> 7 Gorilla, Chimps and Wildlife Tour
               </h5>
 
               <!-- Card Body -->
@@ -428,7 +481,7 @@
               <!-- Image -->
               <img src="images/Murchison Falls,.jpg" alt="Wildlife Safari" class="card-img-top">
               <!-- Title -->
-              <h5 class="fw-bold mt-2"> Murchison Fall National Park
+              <h5 class="fw-bold mt-2 mb-2 px-3"> 3 Murchison Fall National Park
               </h5>
 
               <!-- Card Body -->
@@ -467,7 +520,7 @@
               <!-- Image -->
               <img src="images/r2.png" alt="Wildlife Safari" class="card-img-top">
               <!-- Title -->
-              <h5 class="fw-bold mt-2"> Murchison Fall National Park and Wildlife Game Viewing
+              <h5 class="fw-bold mt-2 mb-2 px-3"> 2 Murchison Fall National Park and Wildlife Game Viewing
               </h5>
 
               <!-- Card Body -->
@@ -506,9 +559,9 @@
               </span>
 
               <!-- Image -->
-              <img src="images/rafu.png" alt="Wildlife Safari" class="card-img-top">
+              <img src="images/elephants.jpeg" alt="Wildlife Safari" class="card-img-top">
               <!-- Title -->
-              <h5 class="fw-bold mt-2"> 6 days Uganda Ultimate Wildlife Safari Experience
+              <h5 class="fw-bold mt-2 mb-2 px-3"> 6 days Uganda Ultimate Wildlife Safari Experience
               </h5>
 
               <!-- Card Body -->
@@ -550,7 +603,7 @@
               <!-- Image -->
               <img src="images/kibale4.png" alt="Wildlife Safari" class="card-img-top">
               <!-- Title -->
-              <h5 class="fw-bold mt-2"> 3 days Kibale Chimpanzee Tracking Safari
+              <h5 class="fw-bold mt-2 mb-2 px-3"> 3 days Kibale Chimpanzee Tracking Safari
               </h5>
 
               <!-- Card Body -->
@@ -592,7 +645,7 @@
               <!-- Image -->
               <img src="images/kidepo.jpg" alt="Wildlife Safari" class="card-img-top">
               <!-- Title -->
-              <h5 class="fw-bold mt-2"> 3 days Kidepo Valley National Park
+              <h5 class="fw-bold mt-2 mb-2 px-3"> 3 days Kidepo Valley National Park
               </h5>
 
               <!-- Card Body -->
@@ -635,7 +688,7 @@
               <!-- Image -->
               <img src="images/kidepo.jpg" alt="Wildlife Safari" class="card-img-top">
               <!-- Title -->
-              <h5 class="fw-bold mt-2"> 5 days Kidepo and Cultural Experience
+              <h5 class="fw-bold mt-2 mb-2 px-3"> 5 days Kidepo and Cultural Experience
               </h5>
 
               <!-- Card Body -->
@@ -675,19 +728,49 @@
 
 
 
-  <!-- Footer -->
-  <footer class="text-center py-4">
+   <!-- ===== FOOTER ===== -->
+  <footer class="py-5">
     <div class="container">
-      <p>© 2025 Pearl Quest Safaris Tours And Travel | Designed with ❤️ in Uganda</p>
-      <p class="creator">
-        Created by <strong>Jane</strong>
-      </p>
-      <div class="social-icons mb-4">
-        <a href="https://www.facebook.com/share/14Tp9AVRorJ/" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/deangratius" target="_blank"><i class="fab fa-instagram"></i></a>
-        <!-- <a href="#" target="_blank"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a> -->
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div>
+          <h5 class="fw-bold">Pearl Quest Safaris</h5>
+          <p>
+            Your trusted partner in exploring Uganda’s wildlife,
+            culture and unforgettable adventures.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="quick-links">
+          <h5>Quick Links</h5>
+          <a href="index.html">Home</a>
+          <a href="tours.html">Tours & Packages</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Social & Contact -->
+        <div>
+          <h5>Connect With Us</h5>
+
+          <div class="social-icons mb-3">
+            <a href="https://www.facebook.com/share/14Tp9AVRorJ/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/deangratius"><i class="fab fa-instagram"></i></a>
+          </div>
+
+          <small>Designed with ❤️ in Uganda</small><br>
+          <small class="text-warning">Created by Jane</small>
+        </div>
+
       </div>
+
+      <hr class="my-4">
+      <p class="text-center mb-0">
+        © 2026 Pearl Quest Safaris Tours And Travel
+      </p>
+
     </div>
   </footer>
 
